@@ -1,0 +1,131 @@
+body {
+    background-color: lightgrey;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    margin: auto;
+    background-color: white;
+    width: 800px;
+    padding: 5px;
+    background-image: url("../images/pattern-bg.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.slider {
+    position: relative;
+    width: 750px;
+    height: 375px;
+}
+
+ul.slider li {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    margin-top: 26px;
+}
+
+ul.slider li img {
+    width: 30%;
+    height: 325px;
+    object-fit: cover;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.4);
+}
+
+ul.slider li:first-child {
+    opacity: 1;
+    /*Mostramos el primer <li>*/
+}
+
+ul.slider li:target {
+    opacity: 1;
+    /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+ul.slider li:first-child p {
+    opacity: 1;
+    /*Mostramos el primer <li>*/
+}
+
+ul.slider li:target .textcontainer {
+    opacity: 1;
+    /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+.menu {
+    position: absolute;
+    top: 334px;
+    right: 50px;
+    display: flex;
+    text-align: right;
+    margin: 20px;
+    bottom: -10px;
+    right: 395px;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a {
+    text-decoration: none;
+    background-color: white;
+    padding: 7px;
+}
+
+.menu li a img {
+    width: 12px;
+    height: 12px;
+}
+
+.menu li a.prev {
+    border-radius: 50% 0 0 50%;
+}
+
+.menu li a.next {
+    border-radius: 0 50% 50% 0;
+}
+
+p {
+    margin: 0 3rem;
+    font-weight: 300;
+    font-size: 16px;
+    color: hsl(240, 38%, 20%);
+    line-height: 1.5;
+}
+
+.textcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 10px;
+}
+
+.profession {
+    color: hsl(240, 18%, 77%);
+    font-size: 10px;
+}
